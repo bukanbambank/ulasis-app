@@ -30,16 +30,29 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
+            'restaurant_name' => ['required', 'string', 'max:255'],
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
+        $user = \Illuminate\Support\Facades\DB::transaction(function () use ($request) {
+            $tenantId = \Illuminate\Support\Str::slug($request->restaurant_name) . '-' . \Illuminate\Support\Str::random(4);
+
+            $tenant = \App\Models\Tenant::create(['id' => $tenantId]);
+
+            \App\Models\Restaurant::create([
+                'tenant_id' => $tenant->id,
+                'name' => $request->restaurant_name,
+            ]);
+
+            return User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+                'tenant_id' => $tenant->id,
+            ]);
+        });
 
         event(new Registered($user));
 

@@ -1,0 +1,24 @@
+﻿
+   FAIL  Tests\Feature\Auth\RegistrationTest
+  Γ£ô registration screen can be rendered     1.34s  
+  Γ¿» new users can register                  0.10s  
+  ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ  
+   FAILED  Tests\Feature\Auth\RegistrationTestΓÇª    
+  The user is not authenticated
+Failed asserting that false is true.
+
+  at tests\Feature\Auth\RegistrationTest.php:20
+     16Γûò         'password' => 'password',
+     17Γûò         'password_confirmation' => 'password',
+     18Γûò     ]);
+     19Γûò 
+  Γ₧£  20Γûò     $this->assertAuthenticated();
+     21Γûò     $response->assertRedirect(route('dashboard', absolute: false));
+     22Γûò 
+     23Γûò     $user = \App\Models\User::where('email', 'test@example.com')->first();
+     24Γûò     \Illuminate\Support\Facades\Notification::assertSentTo($user, \Illuminate\Auth\Notifications\VerifyEmail::class);
+
+
+  Tests:    1 failed, 1 passed (2 assertions)
+  Duration: 1.70s
+

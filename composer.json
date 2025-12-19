@@ -3,14 +3,23 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "keywords": [
+        "laravel",
+        "framework"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "intervention/image": "^3.7",
         "laravel/framework": "^11.31",
-        "laravel/tinker": "^2.9"
+        "laravel/socialite": "^5.17",
+        "laravel/tinker": "^2.9",
+        "maatwebsite/excel": "^3.1",
+        "stancl/tenancy": "^3.8"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.14",
+        "barryvdh/laravel-ide-helper": "^3.5",
         "fakerphp/faker": "^1.23",
         "laravel/breeze": "^2.3",
         "laravel/pail": "^1.1",

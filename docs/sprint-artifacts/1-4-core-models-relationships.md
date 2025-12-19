@@ -2,7 +2,7 @@
 
 **Epic:** 1: Foundation & Technical Setup
 **Story ID:** 1.4
-**Status:** ready-for-dev
+**Status:** Ready for Review
 **Priority:** High
 
 ## Description
@@ -68,6 +68,41 @@
 ## Dependencies & Libraries
 - Laravel Eloquent
 
-## Worklog & Notes
-- **Created:** 2025-12-06
-- **Context:** Enforces business logic and data integrity at the app level.
+## Dev Agent Record
+
+### Implementation Plan
+- [x] Generate Models
+- [x] Implement Restaurant Model
+- [x] Implement Questionnaire Model
+- [x] Implement QrCode Model
+- [x] Implement FeedbackResponse Model
+- [x] Implement SupportTicket Model
+- [x] Implement AdminAuditLog Model
+- [x] Update User Model
+- [x] Verification
+
+### Debug Log
+- (Empty)
+
+### Completion Notes
+- ✅ Implemented `Restaurant` model with relationships.
+- ✅ Implemented `Questionnaire` model with relationships and JSON casting.
+- ✅ Implemented `QrCode` model with relationships.
+- ✅ Implemented `FeedbackResponse` model (ratings cast to array).
+- ✅ Implemented `SupportTicket` and `AdminAuditLog` models.
+- ✅ Updated `User` model with tenant/ticket relationships.
+- ✅ Verified all models use `BelongsToTenant` trait (except AuditLog).
+
+## File List
+- app/Models/Restaurant.php
+- app/Models/Questionnaire.php
+- app/Models/QrCode.php
+- app/Models/FeedbackResponse.php
+- app/Models/SupportTicket.php
+- app/Models/AdminAuditLog.php
+- app/Models/User.php
+- tests/Feature/ModelRelationshipTest.php
+
+## Change Log
+- 2025-12-06: Core Models Implementation (Story 1.4)
+

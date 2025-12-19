@@ -1,0 +1,331 @@
+﻿
+   PASS  Tests\Unit\ExampleTest
+  Γ£ô that true is true                       0.02s  
+
+   PASS  Tests\Feature\AdminAccessTest
+  Γ£ô non admin cannot access admin dashboarΓÇª 1.37s  
+  Γ£ô admin can access admin dashboard        0.07s  
+  Γ£ô suspended user is logged out            0.06s  
+
+   PASS  Tests\Feature\AdminSupportTest
+  Γ£ô admin can view tickets                  0.08s  
+  Γ£ô admin can reply to ticket               0.05s  
+
+   PASS  Tests\Feature\AdminUserManagementTest
+  Γ£ô admin can list users                    0.04s  
+  Γ£ô admin can suspend user                  0.07s  
+  Γ£ô admin cannot suspend themselves         0.06s  
+
+   PASS  Tests\Feature\Auth\AuthenticationTest
+  Γ£ô login screen can be rendered            0.06s  
+  Γ£ô users can authenticate using the loginΓÇª 0.04s  
+  Γ£ô users can remember me functionality     0.03s  
+  Γ£ô users can not authenticate with invaliΓÇª 0.24s  
+  Γ£ô users are rate limited after too manyΓÇª  1.14s  
+  Γ£ô users can logout                        0.06s  
+
+   PASS  Tests\Feature\Auth\EmailVerificationTest
+  Γ£ô email verification screen can be rendeΓÇª 0.04s  
+  Γ£ô email can be verified                   0.05s  
+  Γ£ô email is not verified with invalid hasΓÇª 0.06s  
+
+   PASS  Tests\Feature\Auth\PasswordConfirmationTest
+  Γ£ô confirm password screen can be rendereΓÇª 0.04s  
+  Γ£ô password can be confirmed               0.03s  
+  Γ£ô password is not confirmed with invalidΓÇª 0.25s  
+
+   PASS  Tests\Feature\Auth\PasswordResetTest
+  Γ£ô reset password link screen can be rendΓÇª 0.05s  
+  Γ£ô reset password link can be requested    0.08s  
+  Γ£ô reset password screen can be rendered   0.08s  
+  Γ£ô password can be reset with valid token  0.72s  
+  Γ£ô password reset link request is throttlΓÇª 0.05s  
+
+   PASS  Tests\Feature\Auth\PasswordUpdateTest
+  Γ£ô password can be updated                 0.51s  
+  Γ£ô correct password must be provided to uΓÇª 0.04s  
+
+   FAIL  Tests\Feature\Auth\RegistrationTest
+  Γ£ô registration screen can be rendered     0.05s  
+  Γ¿» new users can register                  0.07s  
+
+   PASS  Tests\Feature\Auth\SocialAuthTest
+  Γ£ô redirects to google                     0.05s  
+  Γ£ô existing user can login via google      0.06s  
+  Γ£ô new user is created with tenant         0.19s  
+
+   FAIL  Tests\Feature\DashboardTest
+  Γ¿» dashboard loads with correct stats viaΓÇª 0.06s  
+
+   PASS  Tests\Feature\DebugRelationshipTest
+  Γ£ô user has restaurant relationship        0.06s  
+
+   PASS  Tests\Feature\ExampleTest
+  Γ£ô it returns a successful response        0.03s  
+
+   FAIL  Tests\Feature\FeedbackInboxTest
+  Γ£ô admin can view feedback inbox           0.08s  
+  Γ¿» admin cannot see other tenants feedbacΓÇª 0.05s  
+
+   PASS  Tests\Feature\FeedbackSubmissionTest
+  Γ£ô feedback page loads with valid uuid     0.05s  
+  Γ£ô feedback page 404 with invalid uuid     0.04s  
+  Γ£ô feedback submission stores json correcΓÇª 0.05s  
+
+   FAIL  Tests\Feature\ModelRelationshipTest
+  Γ£ô models exist                            0.05s  
+  Γ£ô relationships are instance of correctΓÇª  0.05s  
+  Γ¿» tenant trait is applied                 0.04s  
+
+   FAIL  Tests\Feature\NegativeFeedbackTest
+  Γ¿» negative feedback triggers email alert  0.04s  
+  Γ¿» positive feedback does not trigger emaΓÇª 0.05s  
+
+   PASS  Tests\Feature\ProfileSettingTest
+  Γ£ô profile page can update restaurant detΓÇª 0.06s  
+
+   FAIL  Tests\Feature\QrCodeTest
+  Γ£ô qr code creation page is displayed      0.05s  
+  Γ¿» qr code can be generated                2.08s  
+  Γ¿» qr code can be downloaded               0.06s  
+  Γ£ô qr code list is displayed               0.10s  
+
+   PASS  Tests\Feature\QuestionnaireTest
+  Γ£ô questionnaire creation page is displayΓÇª 0.05s  
+  Γ£ô questionnaire can be created from tempΓÇª 0.04s  
+  Γ£ô questionnaire editor is displayed       0.06s  
+  Γ£ô questionnaire questions can be updated  0.04s  
+  Γ£ô user cannot edit other tenants questioΓÇª 0.04s  
+  Γ£ô preview page is accessible              0.06s  
+
+   PASS  Tests\Feature\ReportTest
+  Γ£ô admin can export feedback               0.06s  
+
+   PASS  Tests\Feature\SupportTicketTest
+  Γ£ô user can submit support ticket          0.04s  
+  Γ£ô user can view support tickets           0.04s  
+
+   PASS  Tests\Feature\Tenancy\IsolationTest
+  Γ£ô users are scoped to current tenant      0.06s  
+  ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ  
+   FAILED  Tests\Feature\Auth\RegistrationTestΓÇª    
+  The user is not authenticated
+Failed asserting that false is true.
+
+  at tests\Feature\Auth\RegistrationTest.php:20
+     16Γûò         'password' => 'password',
+     17Γûò         'password_confirmation' => 'password',
+     18Γûò     ]);
+     19Γûò 
+  Γ₧£  20Γûò     $this->assertAuthenticated();
+     21Γûò     $response->assertRedirect(route('dashboard', absolute: false));
+     22Γûò 
+     23Γûò     $user = \App\Models\User::where('email', 'test@example.com')->first();
+     24Γûò     \Illuminate\Support\Facades\Notification::assertSentTo($user, \Illuminate\Auth\Notifications\VerifyEmail::class);
+
+  ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ  
+   FAILED  Tests\Feature\DashboardTest > dashboΓÇª   
+  Expected response status code [200] but received 302.
+Failed asserting that 302 is identical to 200.
+
+  at tests\Feature\DashboardTest.php:42
+     38Γûò         ->withoutMiddleware(InitializeTenancyBySession::class)
+     39Γûò         ->withoutExceptionHandling()
+     40Γûò         ->get(route('dashboard'));
+     41Γûò 
+  Γ₧£  42Γûò     $response->assertOk();
+     43Γûò     $response->assertViewHas('stats', function ($stats) {
+     44Γûò         return $stats['total_feedback'] === 10 && $stats['avg_rating'] === 4.5;
+     45Γûò     });
+     46Γûò });
+
+  ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ  
+   FAILED  Tests\Feature\FeedbaΓÇª  QueryException   
+  SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ulasis_fresh_1`.`qr_codes`, CONSTRAINT `qr_codes_questionnaire_id_foreign` FOREIGN KEY (`questionnaire_id`) REFERENCES `questionnaires` (`id`) ON DELETE CASCADE) (Connection: mysql, SQL: insert into `qr_codes` (`id`, `tenant_id`, `questionnaire_id`, `unique_code`, `name`, `is_active`, `created_at`, `updated_at`) values (2, tenant_2, 1, d9d864a9-d776-42ba-a133-5e32fbca0c80, Other QR, 1, 2025-12-06 14:13:18, 2025-12-06 14:13:18))
+
+  at vendor\laravel\framework\src\Illuminate\Database\MySqlConnection.php:53
+     49Γûò             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50Γûò 
+     51Γûò             $this->recordsHaveBeenModified();
+     52Γûò 
+  Γ₧£  53Γûò             $result = $statement->execute();
+     54Γûò 
+     55Γûò             $this->lastInsertId = $this->getPdo()->lastInsertId($sequence);
+     56Γûò 
+     57Γûò             return $result;
+
+  1   vendor\laravel\framework\src\Illuminate\Database\MySqlConnection.php:53
+  2   vendor\laravel\framework\src\Illuminate\Database\Connection.php:812
+
+  ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ  
+   FAILED  Tests\Feature\ModelRelationshipTestΓÇª    
+  Failed asserting that false is true.
+
+  at tests\Feature\ModelRelationshipTest.php:48
+     44Γûò test('tenant trait is applied', function () {
+     45Γûò     expect(in_array('App\Models\Traits\BelongsToTenant', class_uses_recursive(Restaurant::class)))->toBeTrue();
+     46Γûò     expect(in_array('App\Models\Traits\BelongsToTenant', class_uses_recursive(Questionnaire::class)))->toBeTrue();
+     47Γûò     expect(in_array('App\Models\Traits\BelongsToTenant', class_uses_recursive(QrCode::class)))->toBeTrue();
+  Γ₧£  48Γûò     expect(in_array('App\Models\Traits\BelongsToTenant', class_uses_recursive(FeedbackResponse::class)))->toBeTrue();
+     49Γûò     expect(in_array('App\Models\Traits\BelongsToTenant', class_uses_recursive(SupportTicket::class)))->toBeTrue();
+     50Γûò });
+     51Γûò
+
+  1   tests\Feature\ModelRelationshipTest.php:48
+
+  ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ  
+   FAILED  Tests\Feature\NegatiΓÇª  QueryException   
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'field list' (Connection: mysql, SQL: insert into `tenants` (`id`, `name`, `created_at`, `updated_at`) values (test-tenant-alert, Alert Tenant, 2025-12-06 14:13:19, 2025-12-06 14:13:19))
+
+  at vendor\laravel\framework\src\Illuminate\Database\MySqlConnection.php:47
+     43Γûò             if ($this->pretending()) {
+     44Γûò                 return true;
+     45Γûò             }
+     46Γûò 
+  Γ₧£  47Γûò             $statement = $this->getPdo()->prepare($query);
+     48Γûò 
+     49Γûò             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50Γûò 
+     51Γûò             $this->recordsHaveBeenModified();
+
+  1   vendor\laravel\framework\src\Illuminate\Database\MySqlConnection.php:47
+  2   vendor\laravel\framework\src\Illuminate\Database\Connection.php:812
+
+  ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ  
+   FAILED  Tests\Feature\NegatiΓÇª  QueryException   
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'field list' (Connection: mysql, SQL: insert into `tenants` (`id`, `name`, `created_at`, `updated_at`) values (test-tenant-positive, Pos Tenant, 2025-12-06 14:13:19, 2025-12-06 14:13:19))
+
+  at vendor\laravel\framework\src\Illuminate\Database\MySqlConnection.php:47
+     43Γûò             if ($this->pretending()) {
+     44Γûò                 return true;
+     45Γûò             }
+     46Γûò 
+  Γ₧£  47Γûò             $statement = $this->getPdo()->prepare($query);
+     48Γûò 
+     49Γûò             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50Γûò 
+     51Γûò             $this->recordsHaveBeenModified();
+
+  1   vendor\laravel\framework\src\Illuminate\Database\MySqlConnection.php:47
+  2   vendor\laravel\framework\src\Illuminate\Database\Connection.php:812
+
+  ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ  
+   FAILED  Tests\Feature\QrCodeTest > qr code cΓÇª   
+  Expected response status code [201, 301, 302, 303, 307, 308] but received 500.
+Failed asserting that false is true.
+
+The following exception occurred during the last request:
+
+Error: Class "SimpleSoftwareIO\QrCode\Facades\QrCode" not found in D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\app\Http\Controllers\QrCodeController.php:69
+Stack trace:
+#0 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(47): App\Http\Controllers\QrCodeController->store(Object(Illuminate\Http\Request))
+#1 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Routing\Route.php(266): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\QrCodeController), 'store')
+#2 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Routing\Route.php(212): Illuminate\Routing\Route->runController()
+#3 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Routing\Router.php(808): Illuminate\Routing\Route->run()
+#4 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(170): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#5 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\app\Http\Middleware\CheckUserStatus.php(29): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#6 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(209): App\Http\Middleware\CheckUserStatus->handle(Object(Illuminate\Http\Request), Object(Closure))
+#7 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(51): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#8 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(209): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#9 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Auth\Middleware\Authenticate.php(64): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#10 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(209): Illuminate\Auth\Middleware\Authenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#11 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php(88): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(209): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(49): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(209): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#15 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(121): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#16 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(64): Illuminate\Session\Middleware\StartSession->handleStatefulRequest(Object(Illuminate\Http\Request), Object(Illuminate\Session\Store), Object(Closure))
+#17 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(209): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(209): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#20 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(75): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(209): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#22 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(127): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#23 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Routing\Router.php(807): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#24 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Routing\Router.php(786): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#25 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Routing\Router.php(750): Illuminate\Routing\Router->runRoute(Object(Illuminate\Http\Request), Object(Illuminate\Routing\Route))
+#26 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Routing\Router.php(739): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#27 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(201): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#28 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(170): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#29 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\barryvdh\laravel-debugbar\src\Middleware\InjectDebugbar.php(59): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(209): Barryvdh\Debugbar\Middleware\InjectDebugbar->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#33 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(209): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#36 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(209): Illuminate\Foundation\Http\Middleware\TrimStrings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#37 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Http\Middleware\ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#38 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(209): Illuminate\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#39 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php(110): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#40 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(209): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Http\Middleware\HandleCors.php(49): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#42 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(209): Illuminate\Http\Middleware\HandleCors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#43 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Http\Middleware\TrustProxies.php(58): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#44 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(209): Illuminate\Http\Middleware\TrustProxies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#45 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#46 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(209): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks->handle(Object(Illuminate\Http\Request), Object(Closure))
+#47 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(127): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#48 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(176): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#49 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(145): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#50 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Foundation\Testing\Concerns\MakesHttpRequests.php(607): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#51 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\laravel\framework\src\Illuminate\Foundation\Testing\Concerns\MakesHttpRequests.php(397): Illuminate\Foundation\Testing\TestCase->call('POST', 'http://127.0.0....', Array, Array, Array, Array)
+#52 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\tests\Feature\QrCodeTest.php(43): Illuminate\Foundation\Testing\TestCase->post('http://127.0.0....', Array)
+#53 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\pestphp\pest\src\Factories\TestCaseMethodFactory.php(168): P\Tests\Feature\QrCodeTest->{closure}()
+#54 [internal function]: P\Tests\Feature\QrCodeTest->Pest\Factories\{closure}()
+#55 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\pestphp\pest\src\Concerns\Testable.php(419): call_user_func_array(Object(Closure), Array)
+#56 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\pestphp\pest\src\Support\ExceptionTrace.php(26): P\Tests\Feature\QrCodeTest->Pest\Concerns\{closure}()
+#57 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\pestphp\pest\src\Concerns\Testable.php(419): Pest\Support\ExceptionTrace::ensure(Object(Closure))
+#58 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\pestphp\pest\src\Concerns\Testable.php(321): P\Tests\Feature\QrCodeTest->__callClosure(Object(Closure), Array)
+#59 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\pestphp\pest\src\Factories\TestCaseFactory.php(169) : eval()'d code(26): P\Tests\Feature\QrCodeTest->__runTest(Object(Closure))
+#60 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\phpunit\phpunit\src\Framework\TestCase.php(1235): P\Tests\Feature\QrCodeTest->__pest_evaluable_qr_code_can_be_generated()
+#61 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\phpunit\phpunit\src\Framework\TestCase.php(514): PHPUnit\Framework\TestCase->runTest()
+#62 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\phpunit\phpunit\src\Framework\TestRunner\TestRunner.php(87): PHPUnit\Framework\TestCase->runBare()
+#63 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\phpunit\phpunit\src\Framework\TestCase.php(361): PHPUnit\Framework\TestRunner->run(Object(P\Tests\Feature\QrCodeTest))
+#64 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\phpunit\phpunit\src\Framework\TestSuite.php(369): PHPUnit\Framework\TestCase->run()
+#65 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\phpunit\phpunit\src\Framework\TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
+#66 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\phpunit\phpunit\src\Framework\TestSuite.php(369): PHPUnit\Framework\TestSuite->run()
+#67 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(64): PHPUnit\Framework\TestSuite->run()
+#68 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\phpunit\phpunit\src\TextUI\Application.php(210): PHPUnit\TextUI\TestRunner->run(Object(PHPUnit\TextUI\Configuration\Configuration), Object(PHPUnit\Runner\ResultCache\DefaultResultCache), Object(PHPUnit\Framework\TestSuite))
+#69 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\pestphp\pest\src\Kernel.php(103): PHPUnit\TextUI\Application->run(Array)
+#70 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\pestphp\pest\bin\pest(184): Pest\Kernel->handle(Array, Array)
+#71 D:\App_Project\B-Mad-Method\Ulasis-fresh-1 - Copy\vendor\pestphp\pest\bin\pest(192): {closure}()
+#72 {main}
+
+----------------------------------------------------------------------------------
+
+Class "SimpleSoftwareIO\QrCode\Facades\QrCode" not found
+
+  at tests\Feature\QrCodeTest.php:48
+     44Γûò             'name' => 'Table 1',
+     45Γûò             'questionnaire_id' => $questionnaire->id,
+     46Γûò         ]);
+     47Γûò 
+  Γ₧£  48Γûò     $response->assertRedirect(route('qr-codes.index'));
+     49Γûò 
+     50Γûò     $qrCode = QrCode::first();
+     51Γûò     $this->assertNotNull($qrCode);
+     52Γûò     $this->assertEquals('Table 1', $qrCode->name);
+
+  ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ  
+   FAILED  Tests\Feature\QrCodeΓÇª  QueryException   
+  SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ulasis_fresh_1`.`qr_codes`, CONSTRAINT `qr_codes_questionnaire_id_foreign` FOREIGN KEY (`questionnaire_id`) REFERENCES `questionnaires` (`id`) ON DELETE CASCADE) (Connection: mysql, SQL: insert into `qr_codes` (`tenant_id`, `questionnaire_id`, `name`, `unique_code`, `image_path`, `is_active`, `updated_at`, `created_at`) values (qr_tenant_3, 1, Table 1, uuid-123, qr-codes/qr_tenant_3/uuid-123.png, 1, 2025-12-06 14:13:21, 2025-12-06 14:13:21))
+
+  at vendor\laravel\framework\src\Illuminate\Database\MySqlConnection.php:53
+     49Γûò             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50Γûò 
+     51Γûò             $this->recordsHaveBeenModified();
+     52Γûò 
+  Γ₧£  53Γûò             $result = $statement->execute();
+     54Γûò 
+     55Γûò             $this->lastInsertId = $this->getPdo()->lastInsertId($sequence);
+     56Γûò 
+     57Γûò             return $result;
+
+  1   vendor\laravel\framework\src\Illuminate\Database\MySqlConnection.php:53
+  2   vendor\laravel\framework\src\Illuminate\Database\Connection.php:812
+
+
+  Tests:    8 failed, 53 passed (158 assertions)
+  Duration: 9.71s
+

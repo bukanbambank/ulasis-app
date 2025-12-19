@@ -52,3 +52,7 @@
 ## Worklog & Notes
 - **Created:** 2025-12-06
 - **Context:** Finding needles in haystacks.
+
+## Implementation Update
+- **Date**: 2025-12-06
+- **Note**: Added search and status query parameters to FeedbackInboxController.

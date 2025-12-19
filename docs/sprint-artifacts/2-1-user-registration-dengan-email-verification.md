@@ -2,7 +2,7 @@
 
 **Epic:** 2: User Authentication & Account Management
 **Story ID:** 2.1
-**Status:** ready-for-dev
+**Status:** Done
 **Priority:** High
 
 ## Description
@@ -58,6 +58,42 @@
     - Create `User` linked to `restaurant_id`.
 3.  **View:** Add fields to `resources/views/auth/register.blade.php`.
 4.  **Request:** Update `RegisterRequest` (or validation logic).
+
+## Tasks/Subtasks
+- [x] **Migration:** Ensure `users` has `owner_name` and create `restaurants` table if needed
+- [x] **Controller:** Update `RegisteredUserController::store` to handle Tenant creation
+    - [x] Create `Restaurant` (Tenant) record
+    - [x] Create `User` linked to `restaurant_id`
+    - [x] Handle database transaction
+- [x] **View:** Add `restaurant_name` and `owner_name` to `register.blade.php`
+- [x] **Request:** Update validation logic in `RegisterRequest` (custom rules for new fields)
+
+## Dev Agent Record
+
+### Implementation Plan
+- [x] Analyze existing migrations for `users` and `restaurants`
+- [x] Create/Update migrations if fields are missing
+- [x] Modify `RegisteredUserController`
+- [x] Update Registration View
+- [x] Verify Email Verification flow
+
+### Completion Notes
+- Implemented `RegisteredUserController` to handle `restaurant_name` and create `Tenant`/`Restaurant`/`User`.
+- Updated `User` model to implement `MustVerifyEmail`.
+- Updated `register.blade.php` to include `Restaurant Name` and rename `Name` to `Owner Name`.
+- Verified implementation with `RegistrationTest.php` covering database creation and email notification.
+
+## File List
+- app/Http/Controllers/Auth/RegisteredUserController.php
+- app/Models/User.php
+- app/Providers/AppServiceProvider.php
+- resources/views/auth/register.blade.php
+- routes/auth.php
+- tests/Feature/Auth/RegistrationTest.php
+
+## Change Log
+- [2025-12-06] Implementation of User Registration with Tenant creation (Story 2.1)
+- [2025-12-06] Code Review Fixes: Added Rate Limiting (5/min), Password Complexity Rules, and Queue configuration.
 
 ## Dependencies & Libraries
 - Laravel Breeze (Built-in)

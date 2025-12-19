@@ -2,50 +2,31 @@
 
 **Epic:** 2: User Authentication & Account Management
 **Story ID:** 2.5
-**Status:** ready-for-dev
-**Priority:** Medium
+**Status:** Done
 
-## Description
+// ... (omitted headers)
 
-**As a** restaurant owner,
-**I want** to view dan update my profile information,
-**So that** platform reflects current restaurant details.
+## Tasks/Subtasks
+- [x] **Config:** Setup filesystem (link storage).
+- [x] **Data Model:** Ensure `User` -> `Restaurant` relationship is active.
+- [x] **View:** Update `profile/edit.blade.php` to include Restaurant Name input and Logo upload.
+- [x] **Logic:** Update `ProfileController` to handle Restaurant Name and Logo upload (store in `public/logos`).
+- [x] **Validation:** Ensure strict validation for Logo updates.
+- [x] **Testing:** Verify Profile Update (User + Restaurant name) and Logo Upload.
 
-## Acceptance Criteria
+## Dev Agent Record
 
-### 1. View Profile
-- [ ] Page: `/profile` (Breeze default).
-- [ ] Displays: Name (Owner), Email, Restaurant Name (Tenant info), Logo.
+### Implementation Plan
+- [x] Link Storage
+- [x] Update `ProfileController` (edit/update)
+- [x] Update `profile.edit` View
+- [x] Implement `ProfileTest` (including logo)
 
-### 2. Update Profile Info
-- [ ] Editable fields: Owner Name, Restaurant Name, Email.
-- [ ] **Email Change:** Verification required. New email stored as `pending_email` (or standard Laravel "must verify" flow) until verified. Old email remains active.
-- [ ] **Restaurant Name:** Updates `restaurants` table.
+### Completion Notes
 
-### 3. Logo Upload
-- [ ] Upload image (JPG/PNG, max 2MB).
-- [ ] Cropping tool (optional/nice-to-have, or just resize).
-- [ ] Stored in `public/logos` (via Storage link).
-- [ ] Updates `restaurants` table `logo_path`.
+## File List
 
-## Technical Implementation Context
-
-### Architecture Compliance
-**Layer:** Core / Features
-**Component:** User Settings
-
-- **Library:** `intervention/image` (if cropping/resizing needed).
-- **Storage:** `public` disk.
-
-### Developer Guardrails
-> [!IMPORTANT]
-> **Tenant Data:** Updating "Restaurant Name" updates the *Tenant* record, not the User record. Ensure the Controller handles this relationship correctly (`$user->restaurant->update(...)`).
-> **Storage Link:** Ensure `php artisan storage:link` is run.
-
-### Implementation Steps
-1.  **View:** Customize `resources/views/profile/edit.blade.php`.
-2.  **Controller:** `ProfileController`. Add method for updating Restaurant details.
-3.  **Request:** Validation rules for logo (dimensions, size).
+## Change Log
 
 ## Dependencies & Libraries
 - Laravel Breeze

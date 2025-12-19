@@ -1,0 +1,88 @@
+﻿
+   FAIL  Tests\Feature\Auth\RegistrationTest
+  Γ£ô registration screen can be rendered          1.27s  
+  Γ¿» new users can register                       0.10s  
+
+   FAIL  Tests\Feature\DashboardTest
+  Γ¿» dashboard loads with correct stats via mock  0.08s  
+
+   PASS  Tests\Feature\ModelRelationshipTest
+  Γ£ô models exist                                 0.04s  
+  Γ£ô relationships are instance of correct class  0.05s  
+  Γ£ô tenant trait is applied                      0.04s  
+
+   FAIL  Tests\Feature\NegativeFeedbackTest
+  Γ¿» negative feedback triggers email alert       0.08s  
+  Γ¿» positive feedback does not trigger email     0.03s  
+  ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ  
+   FAILED  Tests\Feature\Auth\RegistrationTest > newΓÇª   
+  The user is not authenticated
+Failed asserting that false is true.
+
+  at tests\Feature\Auth\RegistrationTest.php:20
+     16Γûò         'password' => 'password',
+     17Γûò         'password_confirmation' => 'password',
+     18Γûò     ]);
+     19Γûò 
+  Γ₧£  20Γûò     $this->assertAuthenticated();
+     21Γûò     $response->assertRedirect(route('dashboard', absolute: false));
+     22Γûò 
+     23Γûò     $user = \App\Models\User::where('email', 'test@example.com')->first();
+     24Γûò     \Illuminate\Support\Facades\Notification::assertSentTo($user, \Illuminate\Auth\Notifications\VerifyEmail::class);
+
+  ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ  
+   FAILED  Tests\Feature\DashboardTest > dashboard lΓÇª   
+  Expected response status code [200] but received 302.
+Failed asserting that 302 is identical to 200.
+
+  at tests\Feature\DashboardTest.php:42
+     38Γûò         ->withoutMiddleware(InitializeTenancyBySession::class)
+     39Γûò         ->withoutExceptionHandling()
+     40Γûò         ->get(route('dashboard'));
+     41Γûò 
+  Γ₧£  42Γûò     $response->assertOk();
+     43Γûò     $response->assertViewHas('stats', function ($stats) {
+     44Γûò         return $stats['total_feedback'] === 10 && $stats['avg_rating'] === 4.5;
+     45Γûò     });
+     46Γûò });
+
+  ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ  
+   FAILED  Tests\Feature\NegativeFeeΓÇª  QueryException   
+  SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ulasis_fresh_1`.`qr_codes`, CONSTRAINT `qr_codes_questionnaire_id_foreign` FOREIGN KEY (`questionnaire_id`) REFERENCES `questionnaires` (`id`) ON DELETE CASCADE) (Connection: mysql, SQL: insert into `qr_codes` (`tenant_id`, `unique_code`, `name`, `is_active`, `questionnaire_id`, `created_at`, `updated_at`) values (test-tenant-alert, neg-feedback-code, Table 1, 1, 1, 2025-12-06 14:25:33, 2025-12-06 14:25:33))
+
+  at vendor\laravel\framework\src\Illuminate\Database\MySqlConnection.php:53
+     49Γûò             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50Γûò 
+     51Γûò             $this->recordsHaveBeenModified();
+     52Γûò 
+  Γ₧£  53Γûò             $result = $statement->execute();
+     54Γûò 
+     55Γûò             $this->lastInsertId = $this->getPdo()->lastInsertId($sequence);
+     56Γûò 
+     57Γûò             return $result;
+
+  1   vendor\laravel\framework\src\Illuminate\Database\MySqlConnection.php:53
+  2   vendor\laravel\framework\src\Illuminate\Database\Connection.php:812
+
+  ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ  
+   FAILED  Tests\Feature\NegativeFeeΓÇª  QueryException   
+  SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ulasis_fresh_1`.`qr_codes`, CONSTRAINT `qr_codes_questionnaire_id_foreign` FOREIGN KEY (`questionnaire_id`) REFERENCES `questionnaires` (`id`) ON DELETE CASCADE) (Connection: mysql, SQL: insert into `qr_codes` (`tenant_id`, `unique_code`, `name`, `is_active`, `questionnaire_id`, `created_at`, `updated_at`) values (test-tenant-positive, pos-feedback-code, Table 2, 1, 1, 2025-12-06 14:25:33, 2025-12-06 14:25:33))
+
+  at vendor\laravel\framework\src\Illuminate\Database\MySqlConnection.php:53
+     49Γûò             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50Γûò 
+     51Γûò             $this->recordsHaveBeenModified();
+     52Γûò 
+  Γ₧£  53Γûò             $result = $statement->execute();
+     54Γûò 
+     55Γûò             $this->lastInsertId = $this->getPdo()->lastInsertId($sequence);
+     56Γûò 
+     57Γûò             return $result;
+
+  1   vendor\laravel\framework\src\Illuminate\Database\MySqlConnection.php:53
+  2   vendor\laravel\framework\src\Illuminate\Database\Connection.php:812
+
+
+  Tests:    4 failed, 4 passed (26 assertions)
+  Duration: 1.99s
+

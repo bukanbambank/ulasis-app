@@ -2,7 +2,7 @@
 
 **Epic:** 2: User Authentication & Account Management
 **Story ID:** 2.3
-**Status:** ready-for-dev
+**Status:** Done
 **Priority:** Medium
 
 ## Description
@@ -50,6 +50,47 @@
 4.  **Controller:** Create `SocialResponseController` (or add methods to Auth controllers).
     - `redirect`: `Socialite::driver('google')->redirect()`
     - `callback`: Handle user creation/lookup.
+
+## Tasks/Subtasks
+- [x] **Install:** `composer require laravel/socialite`
+- [x] **Config:** Setup `config/services.php` for Google provider
+- [x] **Migration:** Add `google_id` to `users` table
+- [x] **Controller:** Implement `SocialAuthController` (redirect & callback)
+- [x] **UI:** Add "Sign in with Google" button to Login/Register pages
+- [x] **Testing:** Create/Update `SocialAuthTest.php`
+
+## Dev Agent Record
+
+### Implementation Plan
+- [x] Install Socialite
+- [x] Create Migration for `google_id`
+- [x] Configure `services.php`
+- [x] Implement `SocialAuthController`
+    - [x] Handle new user registration (auto-create Tenant?)
+    - [x] Link existing users
+- [x] Update Login/Register Blade Views
+- [x] Test Implementation
+
+### Completion Notes
+- Integrated `laravel/socialite` for Google OAuth.
+- Implemented `SocialAuthController` with automatic Tenant/Restaurant creation ("My Restaurant (Default)") for new users.
+- Added UI buttons to Login and Register views.
+- Verified flow with Mocked `SocialAuthTest`.
+- Added `google_id` to `User` `$fillable`.
+
+## File List
+- config/services.php
+- database/migrations/2025_12_06_075442_add_google_id_to_users_table.php
+- app/Models/User.php
+- app/Http/Controllers/Auth/SocialAuthController.php
+- routes/auth.php
+- resources/views/auth/login.blade.php
+- resources/views/auth/register.blade.php
+- tests/Feature/Auth/SocialAuthTest.php
+
+## Change Log
+- [2025-12-06] Implemented Google OAuth Registration & Login (Story 2.3).
+- [2025-12-06] Configured default Tenant creation for social sign-ups.
 
 ## Dependencies & Libraries
 - `laravel/socialite`

@@ -46,3 +46,7 @@
 ## Worklog & Notes
 - **Created:** 2025-12-06
 - **Context:** Ban hammer.
+
+## Implementation Update
+- **Date**: 2025-12-06
+- **Note**: Implemented suspend and ctivate methods in Admin\UserController.

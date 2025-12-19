@@ -46,3 +46,7 @@
 ## Worklog & Notes
 - **Created:** 2025-12-06
 - **Context:** Customer service.
+
+## Implementation Update
+- **Date**: 2025-12-06
+- **Note**: Created Admin\SupportController and threaded reply views.

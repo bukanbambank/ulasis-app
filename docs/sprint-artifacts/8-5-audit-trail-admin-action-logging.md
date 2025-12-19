@@ -44,3 +44,7 @@
 ## Worklog & Notes
 - **Created:** 2025-12-06
 - **Context:** Accountability.
+
+## Implementation Update
+- **Date**: 2025-12-06
+- **Note**: Created AuditLog model and Admin\AuditLogController.

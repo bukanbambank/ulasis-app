@@ -2,7 +2,7 @@
 
 **Epic:** 1: Foundation & Technical Setup
 **Story ID:** 1.5
-**Status:** ready-for-dev
+**Status:** Ready for Review
 **Priority:** High
 
 ## Description

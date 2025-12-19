@@ -51,3 +51,7 @@
 ## Worklog & Notes
 - **Created:** 2025-12-06
 - **Context:** Identity.
+
+## Implementation Update
+- **Date**: 2025-12-06
+- **Note**: Updated ProfileController to handle Logo upload.

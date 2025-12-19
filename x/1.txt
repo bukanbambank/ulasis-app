@@ -1,0 +1,17 @@
+Berikut adalah akun yang bisa digunakan untuk demo:
+
+1. Akun yang baru saja saya buat dan verifikasi (Role: Business Owner):
+
+Email: test99@example.com
+Password: V3ryS3cureP@ssw0rd!
+Status: Terverifikasi, Profile sudah diupdate.
+2. Akun Demo Bawaan (Berdasarkan Database & Seeder):
+
+Owner: owner@kopisantai.com (Password kemungkinan: password)
+Admin: admin@ulasis.site (Password kemungkinan: password)
+Saya menyarankan menggunakan akun test99@example.com yang sudah terverifikasi dan datanya (Questionnaire & Feedback) baru saja kita buat.
+
+Untuk demo/pengujian yang sudah dilakukan, kredensial akun yang digunakan adalah:
+
+Email: strong_agent@ulasis.site
+Password: Password123!

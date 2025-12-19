@@ -55,3 +55,7 @@
 ## Worklog & Notes
 - **Created:** 2025-12-06
 - **Context:** The moment of truth.
+
+## Implementation Update
+- **Date**: 2025-12-06
+- **Note**: QR Code logic implemented in FeedbackController. Data links to qr_codes table.
